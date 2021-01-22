@@ -52,6 +52,7 @@ export default function Weather() {
               id="city-input"
               placeholder="Enter a city name..."
               autoComplete="off"
+              autoFocus="on"
             />
 
             <input
