@@ -51,6 +51,7 @@ export default function Weather() {
               type="search"
               id="city-input"
               placeholder="Enter a city name..."
+              autoComplete="off"
             />
 
             <input
