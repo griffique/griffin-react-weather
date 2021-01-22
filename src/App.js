@@ -1,4 +1,6 @@
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+
 import Weather from "./Weather.js";
 
 import Footer from "./Footer.js";
