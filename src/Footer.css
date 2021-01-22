@@ -1,0 +1,17 @@
+/*Footer*/
+p {
+  display: inline;
+}
+#coded-by {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#updates {
+  font-size: 12px;
+  font-style: italic;
+}

@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* General Styles */
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: #03045e;
+}
+a:visited {
+  color: #adb5bd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+
+  font-family: "Cabin";
+  background-image: linear-gradient(to top, #90e0ef 0%, #fff 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  color: #03045e;
+}
+h1 {
+  padding: 20px 0 0 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h5 {
+  font-size: 18px;
+  margin: 10px 0 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  padding: 10px;
+}
+.container {
+  max-width: 975px;
+  margin: 50px auto auto;
+}
+/* Morning, Day and Night Mode Styles */
+.morning {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  color: #000;
+}
+.day {
+  background-image: linear-gradient(to top, #90e0ef 0%, #fff 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+.day h2 {
+  color: #90e0ef;
+  font-size: 24px;
+}
+.day h5 {
+  color: #03045e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.day h6 {
+  color: #00b4d8;
+}
+
+.morning #current-time {
+  color: #000;
+}
+.morning #hourly-forecast-display h4 {
+  color: #000;
+}
+
+.morning .wind-conditions h2 {
+  color: #000;
+}
+
+.night {
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+.night h1,
+h2 {
+  color: #fff;
+}
+.night h2 {
+  font-size: 24px;
+}
+.night #coded-by {
+  color: #000;
+}
+.night .temp-rain .active {
+  color: #fff;
+  cursor: default;
 }

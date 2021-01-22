@@ -1,0 +1,92 @@
+/*Temperature, City and Time Display*/
+
+#cels-convert,
+#fahr-convert,
+#convert-slash {
+  font-size: 16px;
+}
+
+.converted-temp {
+  font-weight: lighter;
+  color: #90e0ef;
+}
+
+.temp-rain {
+  text-align: right;
+  position: relative;
+  top: -25px;
+}
+
+.temp-rain .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.temp-rain .active:hover {
+  text-decoration: none;
+}
+.temp-rain button {
+  background: none;
+  border: none;
+}
+.temp-rain button.click {
+  border: none;
+}
+.temp-rain button.hover {
+  border: none;
+}
+.wind-conditions h2 {
+  text-align: right;
+  position: relative;
+  top: -25px;
+  font-size: 18px;
+}
+
+/*Search area*/
+
+.btn-light:hover {
+  background: #e1e6ea;
+}
+.search-bar {
+  margin: 25px 0 0 0;
+  padding: 0;
+  color: #03045e;
+}
+#city-input {
+  width: 80%;
+}
+#locate-me-button {
+  text-align: right;
+  margin: 25px 0 0 0;
+}
+#search-area {
+  position: relative;
+  top: -50px;
+}
+#submit-button {
+  position: relative;
+  top: -2px;
+}
+
+/* Forecast Display */
+.card {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#hourly-forecast-display h4 {
+  color: #03045e;
+}
+.morning #hourly-forecast-display h4 {
+  color: #000;
+}
+.forecast-container {
+  margin: 0 auto;
+  max-width: 975px;
+  text-align: center;
+  position: relative;
+  top: -25px;
+}
