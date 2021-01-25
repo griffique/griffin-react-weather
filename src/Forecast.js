@@ -9,7 +9,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/01d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>{" "}
@@ -18,7 +18,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/02d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>{" "}
@@ -27,7 +27,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/10d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>{" "}
@@ -36,7 +36,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/04d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>{" "}
@@ -45,7 +45,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/04d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>
@@ -54,7 +54,7 @@ export default function Forecast() {
           <img
             src="https://openweathermap.org/img/wn/04d@2x.png"
             alt="weather"
-            class="card-img"
+            className="card-img"
           />
           <h6>19</h6>
         </div>
