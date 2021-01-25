@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate.js";
+import WeatherIcon from "./WeatherIcon.js";
 import axios from "axios";
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -19,13 +20,15 @@ export default function Weather() {
                 </span>
               </h2>
             </div>
+
             <div className="col-6 temp-rain">
               <h1>
-                <img
-                  src="https://openweathermap.org/img/wn/01d@2x.png"
-                  alt=""
-                  id="icon-element"
-                />
+                <span className="icon-display">
+                  <WeatherIcon
+                    iconCode={weatherData.icon}
+                    iconAlt={weatherData.conditions}
+                  />
+                </span>
                 <span id="temp-display">
                   {Math.round(weatherData.temperature)}
                 </span>
@@ -47,7 +50,7 @@ export default function Weather() {
                     </span>
                   </h2>
                   <h2>
-                    Wind Speed:{" "}
+                    Wind:{" "}
                     <span id="wind-speed">{Math.round(weatherData.wind)}</span>{" "}
                     km/h
                   </h2>
