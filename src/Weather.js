@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 export default function Weather() {
-  const [loaded, setLoaded] = useState(false);
-
-  const [weatherData, setWeatherData] = useState({});
-  if (loaded) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  if (weatherData.ready) {
     return (
       <div className="weather">
         <div className="current-weather">
@@ -15,7 +13,7 @@ export default function Weather() {
                 <span id="city-name">{weatherData.city}</span>
               </h1>
               <h2>
-                <span id="current-time">Last Updated</span>
+                <span id="current-time">{weatherData.date * 1000}</span>
               </h2>
             </div>
             <div className="col-6 temp-rain">
@@ -41,11 +39,13 @@ export default function Weather() {
               <div className="row wind-conditions">
                 <div className="col-12">
                   <h2>
-                    <span id="conditions">{weatherData.conditions}</span>
+                    <span id="conditions" className="text-capitalize">
+                      {weatherData.conditions}
+                    </span>
                   </h2>
                   <h2>
-                    wind:{" "}
-                    <span id="wind-speed">{Math.round(weatherData.wind)}</span>
+                    Wind Speed:{" "}
+                    <span id="wind-speed">{Math.round(weatherData.wind)}</span>{" "}
                     km/h
                   </h2>
                 </div>
@@ -91,17 +91,15 @@ export default function Weather() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showTemp);
     function showTemp(response) {
-      console.log(response);
       setWeatherData({
+        ready: true,
         temperature: response.data.main.temp,
-        date: response.data.dt * 1000,
+        date: response.data.dt,
         conditions: response.data.weather[0].description,
         icon: response.data.weather[0].icon,
         wind: response.data.wind.speed,
         city: response.data.name,
       });
-
-      setLoaded(true);
     }
     return "Loading";
   }
