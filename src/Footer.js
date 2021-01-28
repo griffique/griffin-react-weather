@@ -19,7 +19,7 @@ export default function Footer() {
         Quinn Griffin
       </a>
       🐱‍🚀 <br />
-      <span id="updates"> Code Last Updated Jan 25, 2021 </span>
+      <span id="updates"> Code Last Updated Jan 28, 2021 </span>
     </footer>
   );
 }

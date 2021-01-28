@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
-import Weather from "./Weather.js";
+import WeatherSearch from "./WeatherSearch.js";
 import Forecast from "./Forecast.js";
 import Footer from "./Footer.js";
 
@@ -22,7 +22,7 @@ export default function App() {
   change_background();
   return (
     <div className="App container">
-      <Weather defaultCity="Vernazza" />
+      <WeatherSearch defaultCity="Vernazza" />
       <Forecast />
       <Footer />
     </div>
