@@ -1,7 +1,7 @@
 import React from "react";
 export default function FormattedDate(props) {
   let now = new Date(props.date);
-  console.log(now);
+
   let dayIndex = [
     "Sunday",
     "Monday",

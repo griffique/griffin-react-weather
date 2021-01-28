@@ -22,7 +22,7 @@ export default function App() {
   change_background();
   return (
     <div className="App container">
-      <Weather />
+      <Weather defaultCity="Vernazza" />
       <Forecast />
       <Footer />
     </div>
