@@ -30,6 +30,17 @@ export default function Weather(props) {
       city: response.data.name,
     });
   }
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = `483e555d11f508a7308255583271cc91`;
+    let units = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function findLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
   if (weatherData.ready) {
     return (
       <div className="weather">
@@ -59,7 +70,7 @@ export default function Weather(props) {
             </form>
           </div>
 
-          <div className="col-3" id="locate-me-button">
+          <div className="col-3" id="locate-me-button" onClick={findLocation}>
             <button type="button" className="btn btn-light">
               <span role="img" alt="location pin">
                 📍
