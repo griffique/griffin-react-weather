@@ -1,30 +1,49 @@
 import React, { useState } from "react";
 import "./TemperatureConvert.css";
 export default function TemperatureConvert(props) {
-  const [displayTemperature, setDisplayTemperature] = useState(
-    props.temperature
-  );
+  const [unit, setUnit] = useState("celsius");
 
   function displayCelsius() {
-    setDisplayTemperature(props.celsiusTemperature);
+    setUnit("celsius");
   }
   function displayFahrenheit() {
-    setDisplayTemperature((props.celsiusTemperature * 9) / 5 + 32);
+    setUnit("fahrenheit");
   }
-  return (
-    <div id="temp-display-convert">
-      {" "}
-      <span id="temp-display">{Math.round(displayTemperature)}</span>°
-      <button id="cels-convert" onClick={displayCelsius}>
+  if (unit === "celsius") {
+    return (
+      <div id="temp-display">
         {" "}
-        C{" "}
-      </button>
-      <span id="convert-slash"> | </span>
-      <span className="converted-temp">
+        <span id="temp-display-celsius">
+          {Math.round(props.celsiusTemperature)}
+        </span>
+        °
+        <button id="cels-convert-active" onClick={displayCelsius}>
+          {" "}
+          C{" "}
+        </button>
+        <span id="convert-slash"> | </span>
         <button id="fahr-convert" onClick={displayFahrenheit}>
           F
         </button>
-      </span>
-    </div>
-  );
+      </div>
+    );
+  } else {
+    return (
+      <div id="temp-display">
+        {" "}
+        <span id="temp-display-fahrenheit">
+          {Math.round((props.celsiusTemperature * 9) / 5 + 32)}
+        </span>
+        °
+        <button id="cels-convert" onClick={displayCelsius}>
+          {" "}
+          C{" "}
+        </button>
+        <span id="convert-slash"> | </span>
+        <button id="fahr-convert-active" onClick={displayFahrenheit}>
+          F
+        </button>
+      </div>
+    );
+  }
 }

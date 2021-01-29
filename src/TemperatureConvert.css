@@ -15,13 +15,15 @@ button.hover {
 #cels-convert,
 #fahr-convert,
 #convert-slash {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.converted-temp {
-  font-weight: lighter;
-  color: #90e0ef;
+#cels-convert-active {
+  font-weight: bold;
+  font-size: 18px;
 }
-.temp-convert-display {
-  display: inline;
+
+#fahr-convert-active {
+  font-weight: bold;
+  font-size: 18px;
 }
