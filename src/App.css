@@ -35,16 +35,18 @@
 .day .temp-rain {
   color: #03045e;
 }
-
+.morning h1 {
+  color: #03045e;
+}
 .morning #current-time {
-  color: #000;
+  color: #03045e;
 }
 .morning #hourly-forecast-display h4 {
-  color: #000;
+  color: #03045e;
 }
 
 .morning .wind-conditions h2 {
-  color: #000;
+  color: #03045e;
 }
 
 .night {

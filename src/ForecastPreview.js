@@ -9,7 +9,7 @@ export default function ForecastPreview(props) {
   }
 
   return (
-    <div className="card col-sm-2">
+    <div className="card col-sm-2 forecast-display">
       <h4>{hours()}</h4>
       <ForecastIcon iconCode={props.data.weather[0].icon} />
       <h6>

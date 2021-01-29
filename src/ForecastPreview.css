@@ -10,8 +10,9 @@
 #hourly-forecast-display h4 {
   color: #03045e;
 }
-.morning #hourly-forecast-display h4 {
-  color: #000;
+.morning #hourly-forecast-display h4,
+h6 {
+  color: #03045e;
 }
 .forecast-container {
   margin: 0 auto 50px;
