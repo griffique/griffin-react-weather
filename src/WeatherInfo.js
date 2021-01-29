@@ -1,4 +1,6 @@
 import React from "react";
+import Forecast from "./Forecast.js";
+import "./Forecast.css";
 import FormattedDate from "./FormattedDate";
 import TemperatureConvert from "./TemperatureConvert.js";
 import WeatherIcon from "./WeatherIcon";
@@ -50,6 +52,7 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
+      <Forecast city={props.data.city} />
     </div>
   );
 }

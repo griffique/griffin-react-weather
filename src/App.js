@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 import WeatherSearch from "./WeatherSearch.js";
-import Forecast from "./Forecast.js";
+
 import Footer from "./Footer.js";
 
 export default function App() {
@@ -23,7 +23,6 @@ export default function App() {
   return (
     <div className="App container">
       <WeatherSearch defaultCity="Vernazza" />
-      <Forecast />
       <Footer />
     </div>
   );

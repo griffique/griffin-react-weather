@@ -1,64 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import ForecastPreview from "./ForecastPreview.js";
 import "./Forecast.css";
-export default function Forecast() {
-  return (
-    <div className="forecast-container">
-      <div className="row" id="hourly-forecast-display">
-        <div className="card col-sm-2">
-          <h4>Sunday 13:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/01d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
-        </div>{" "}
-        <div className="card col-sm-2">
-          <h4>Sunday 15:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/02d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
-        </div>{" "}
-        <div className="card col-sm-2">
-          <h4>Sunday 17:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
-        </div>{" "}
-        <div className="card col-sm-2">
-          <h4>Sunday 19:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
-        </div>{" "}
-        <div className="card col-sm-2">
-          <h4>Sunday 21:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
-        </div>
-        <div className="card col-sm-2">
-          <h4>Sunday 21:00</h4>
-          <img
-            src="https://openweathermap.org/img/wn/04d@2x.png"
-            alt="weather"
-            className="card-img"
-          />
-          <h6>19</h6>
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecastData, setForecastData] = useState(null);
+  function handleForecastSubmit(response) {
+    setLoaded(true);
+    setForecastData(response.data);
+  }
+  if (loaded && props.city === forecastData.city.name) {
+    return (
+      <div className="forecast-container">
+        <div className="row" id="hourly-forecast-display">
+          <ForecastPreview data={forecastData.list[0]} />
+          <ForecastPreview data={forecastData.list[1]} />
+          <ForecastPreview data={forecastData.list[2]} />
+          <ForecastPreview data={forecastData.list[3]} />
+          <ForecastPreview data={forecastData.list[4]} />
+          <ForecastPreview data={forecastData.list[5]} />
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = `bd4df3f35057e51f97eef41a2f06c077`;
+    let units = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=${units}`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(handleForecastSubmit);
+
+    return null;
+  }
 }
