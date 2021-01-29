@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import TemperatureConvert from "./TemperatureConvert.js";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
@@ -26,18 +27,7 @@ export default function WeatherInfo(props) {
                   iconAlt={props.data.conditions}
                 />
               </span>
-              <span id="temp-display">
-                {Math.round(props.data.temperature)}
-              </span>
-              °
-              <button className="active" id="cels-convert">
-                {" "}
-                C{" "}
-              </button>
-              <span id="convert-slash"> | </span>
-              <span className="converted-temp">
-                <button id="fahr-convert">F</button>
-              </span>
+              <TemperatureConvert temperature={props.data.temperature} />
             </h1>
             <div className="row wind-conditions">
               <div className="col-12">

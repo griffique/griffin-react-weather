@@ -29,18 +29,19 @@
 .temp-rain .active:hover {
   text-decoration: none;
 }
-.temp-rain button {
+button {
   background: none;
   border: none;
   color: #03045e;
 }
-.temp-rain button.click {
+button.click {
   border: none;
   color: #03045e;
 }
-.temp-rain button.hover {
+button.hover {
   border: none;
   color: #03045e;
+  cursor: pointer;
 }
 .wind-conditions h2 {
   text-align: right;
