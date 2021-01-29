@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import "./TemperatureConvert.css";
 export default function TemperatureConvert(props) {
   const [displayTemperature, setDisplayTemperature] = useState(
     props.temperature
   );
 
   function displayCelsius() {
-    setDisplayTemperature(props.temperature);
+    setDisplayTemperature(props.celsiusTemperature);
   }
   function displayFahrenheit() {
-    setDisplayTemperature((props.temperature * 9) / 5 + 32);
+    setDisplayTemperature((props.celsiusTemperature * 9) / 5 + 32);
   }
   return (
     <div id="temp-display-convert">

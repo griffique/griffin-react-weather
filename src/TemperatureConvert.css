@@ -1,0 +1,27 @@
+button {
+  background: none;
+  border: none;
+  color: #03045e;
+}
+button.click {
+  border: none;
+  color: #03045e;
+}
+button.hover {
+  border: none;
+  color: #03045e;
+  cursor: pointer;
+}
+#cels-convert,
+#fahr-convert,
+#convert-slash {
+  font-size: 16px;
+}
+
+.converted-temp {
+  font-weight: lighter;
+  color: #90e0ef;
+}
+.temp-convert-display {
+  display: inline;
+}

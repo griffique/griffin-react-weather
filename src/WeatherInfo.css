@@ -1,20 +1,11 @@
 /*Temperature, City and Time Display*/
 
-#cels-convert,
-#fahr-convert,
-#convert-slash {
-  font-size: 16px;
-}
-
-.converted-temp {
-  font-weight: lighter;
-  color: #90e0ef;
-}
 .icon-display {
   position: relative;
   top: 15px;
   right: 10px;
 }
+
 .temp-rain {
   text-align: right;
   position: relative;
@@ -29,20 +20,7 @@
 .temp-rain .active:hover {
   text-decoration: none;
 }
-button {
-  background: none;
-  border: none;
-  color: #03045e;
-}
-button.click {
-  border: none;
-  color: #03045e;
-}
-button.hover {
-  border: none;
-  color: #03045e;
-  cursor: pointer;
-}
+
 .wind-conditions h2 {
   text-align: right;
   position: relative;

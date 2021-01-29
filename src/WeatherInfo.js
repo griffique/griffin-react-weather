@@ -20,15 +20,19 @@ export default function WeatherInfo(props) {
           </div>
 
           <div className="col-6 temp-rain">
-            <h1>
+            <div>
               <span className="icon-display">
                 <WeatherIcon
                   iconCode={props.data.icon}
                   iconAlt={props.data.conditions}
                 />
               </span>
-              <TemperatureConvert temperature={props.data.temperature} />
-            </h1>
+              <h1 className="temp-convert-display">
+                <TemperatureConvert
+                  celsiusTemperature={props.data.temperature}
+                />
+              </h1>
+            </div>
             <div className="row wind-conditions">
               <div className="col-12">
                 <h2>
