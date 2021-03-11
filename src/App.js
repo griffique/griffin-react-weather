@@ -10,9 +10,7 @@ export default function App() {
     let day = new Date();
     let now = day.getHours();
 
-    if (now > 5 && now < 12) {
-      document.body.className = "morning";
-    } else if (now > 12 && now < 18) {
+    if (now > 5 && now < 18) {
       document.body.className = "day";
     } else {
       document.body.className = "night";
