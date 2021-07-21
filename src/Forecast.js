@@ -23,7 +23,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = `bd4df3f35057e51f97eef41a2f06c077`;
+    let apiKey = "e33af9f4ffaff267497e097ff8a024a5";
     let units = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=${units}`;
     console.log(apiUrl);
