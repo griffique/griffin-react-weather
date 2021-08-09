@@ -14,7 +14,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
   function search() {
-    let apiKey = "e33af9f4ffaff267497e097ff8a024a5";
+    let apiKey = process.env.REACT_APP_API_KEY;
     let units = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
@@ -33,7 +33,7 @@ export default function Weather(props) {
   function showPosition(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let apiKey = "e33af9f4ffaff267497e097ff8a024a5";
+    let apiKey = process.env.REACT_APP_API_KEY;
     let units = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
