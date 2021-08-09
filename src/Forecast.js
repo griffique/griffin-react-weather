@@ -26,7 +26,6 @@ export default function Forecast(props) {
     let apiKey = process.env.REACT_APP_API_KEY;
     let units = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=${units}`;
-    console.log(apiUrl);
     axios.get(apiUrl).then(handleForecastSubmit);
 
     return null;
