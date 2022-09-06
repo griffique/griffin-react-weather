@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-
 import WeatherSearch from "./WeatherSearch.js";
-
 import Footer from "./Footer.js";
 
 export default function App() {
